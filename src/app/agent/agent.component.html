@@ -1,0 +1,57 @@
+<div class="container py-5  ">
+    <div class="row mb-4 text-color">
+      <div class="col-lg-5">
+        <p class="font-italic ">Hello admin </p>
+            <p class="mt-2">View the status of your agents and the evolution of their latest alerts</p>
+      </div>
+      <h4 class="mt-5">Installed agents by their status</h4>
+    </div>
+    
+    <div class="row text-center">
+      <!-- Total agents item-->
+      <div class="col-xl col-sm-6 mb-5">
+        <div class="card bg-white border border-2 shadow-sm mb-5 py-5 px-4">
+          <p class="mb-2 text-color">Total agents</p>
+          <span class="fs-2 total-agents-color">{{agents.length}}</span>
+        </div>
+      </div>
+      <!-- End-->
+
+      <!-- Active agents item-->
+      <div class="col-xl col-sm-6 mb-5">
+        <div class="card bg-white border border-2 shadow-sm mb-5 py-5 px-4">
+          <p class="mb-2 text-color">Active agents</p>
+          <span class="fs-2 active-agents-color">1</span>
+        </div>
+      </div>
+      <!-- End-->
+<!--{{ (agent | filter : { status: 'active' } : true).length }} -->
+      <!-- Disconnected agents item-->
+      <div class="col-xl col-sm-6 mb-5">
+        <div class="card bg-white border border-2 shadow-sm mb-5 py-5 px-4">
+          <p class="mb-2 text-color">Disconnected agents</p>
+          <span class="fs-2 disconnected-agents-color">3</span>
+        </div>
+      </div>
+      <!-- End-->
+
+      <!-- Pending agents item-->
+      <div class="col-xl col-sm-6 mb-5">
+        <div class="card bg-white border border-2 shadow-sm mb-5 py-5 px-4">
+          <p class="mb-2 text-color">Pending agents</p>
+          <span class="fs-2 pending-agents-color">0 <!--{{ getCount('active') }}--></span>
+        </div>
+      </div>
+      <!-- End-->
+       <!-- Never connected agents item-->
+       <div class="col-xl col-sm-6 mb-5">
+        <div class="card bg-white border border-2 shadow-sm mb-5 py-5 px-4">
+          <p class="mb-2 text-color">Never connected agents</p>
+          <span class="fs-2 never-connected-agents-color">0</span>
+        </div>
+      </div>
+      <!-- End-->
+
+
+    </div>
+  </div>
